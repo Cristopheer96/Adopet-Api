@@ -1,6 +1,6 @@
 class Owner < ApplicationRecord
-  validate :phonenumber, presence: true
+  validates :phonenumber, presence: true
 
-  has_many :pets
+  has_many :pets, dependent: :destroy
   belongs_to :user
 end

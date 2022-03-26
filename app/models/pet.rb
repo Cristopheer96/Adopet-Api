@@ -1,10 +1,10 @@
 class Pet < ApplicationRecord
-  validate :size, presence: true
-  validate :gender, presence: true
-  validate :coatsize, presence: true
-  validate :state, presence: true
-  validate :ubication, presence: true
-  validate :age, presence: true
+  validates :size, presence: true
+  validates :gender, presence: true
+  validates :coatsize, presence: true
+  validates :state, presence: true
+  validates :ubication, presence: true
+  validates :age, presence: true
 
   belongs_to :owner
 end
