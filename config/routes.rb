@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  namespace :api , default: { format: :json } do #decimos que poor defecto devovlera json
+  namespace :api , defaults: { format: :json } do #decimos que poor defecto devovlera json
     namespace :v1 do
-      resources :pets, only: [ :index, :show, :update ]
+      resources :pets, only: [ :index, :show, :updat, :create, :destroy ]
     end
   end
   devise_for :users
