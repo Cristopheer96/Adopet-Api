@@ -37,6 +37,9 @@ gem 'simple_form', github: 'heartcombo/simple_form'
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
   gem 'dotenv-rails'
+  gem 'factory_bot_rails', '~> 4.0'
+  gem 'faker', '~> 1.9'
+  gem 'rspec-rails', '~> 4.1'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -54,6 +57,8 @@ group :development do
 end
 
 group :test do
+  gem 'shoulda-matchers', '~> 5.0'
+  gem 'database_cleaner', '~> 1.7'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver', '>= 4.0.0.rc1'
