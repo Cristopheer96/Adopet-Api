@@ -21,13 +21,11 @@ class Api::V1::PetsController < Api::V1::BaseController
   def create
     @pet = current_user.owner.pets.build(strong_params)
     authorize @pet
-
     if @pet.save
       render :show
     else
       render_error
     end
-
   end
   def destroy
     @pet = Pet.find(params[:id])
